@@ -1,0 +1,38 @@
+Nama : Mas'ady Fawaizul Ihsan
+NIM : 160411100171
+
+Pertemuan 3 - Stack
+
+Kumpulan data yang terurut sesuai bagaimana data tersebut ditambahkan atau dihapus. 
+Proses pada stack terjadi pada satu ujung. Ujung ini disebut 'top'. Sisi yang berlawanan dengan ujung ini disebut 'base'. Stack dalam pengurutan data menggunakan metode LIFO (Last in, First in).
+
+Stack() : membuat tumpukan (stack) baru yang kosong.
+push(item) :menambahkan item baru ke bagian atas tumpukan.
+pop() : menghapus item teratas dari tumpukan.
+peek() : mengembalikan item teratas dari tumpukan tetapi tidak menghapusnya.
+isEmpty() : untuk melihat apakah tumpukan kosong. 
+size() : mengembalikan jumlah item pada stack. 
+
+def stack():
+    st=[]
+    return (st)
+def push(st,data):
+    st.append(data)
+def pop(st):
+    data=st.pop()
+    return(data)
+def peek(st):
+    return(st[len(st)-1])
+def isWmpty(st):
+    return (st==[])
+def size(st):
+    return(len(st))
+
+kata = input("Masukkan Kata: ")
+st=stack()
+hasil=''
+for i in range(len(kata)):
+    push(st,kata[i])
+for i in range(len(kata)):
+    hasil = hasil+pop(st)
+print(hasil)
